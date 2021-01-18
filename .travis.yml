@@ -1,0 +1,27 @@
+language: shell
+os: linux
+git:
+  depth: 1
+
+env:
+  global:
+    - GH_REF=github.com/JLefebvre55/MinecraftModpack.git
+
+branches:
+  only:
+    - master
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y zip jq curl  
+  - echo -e "machine github.com\n  login ${GH_DEPLOY_KEY}" > ~/.netrc
+
+install:
+  - chmod +x .scripts/buildPack.sh
+  - chmod +x .scripts/deploy.sh
+
+script:
+  - .scripts/buildPack.sh
+
+after_success:
+  - .scripts/deploy.sh
