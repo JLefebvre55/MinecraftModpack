@@ -47,8 +47,14 @@ Alphabetical, with supporting mods nested. See [./modpack.json](./modpack.json) 
 - Weapons mods
 - ...
 
+## OptiFine 1.12.2 Issue
+
+Some may be wondering as to why OptiFine isn't included in this modpack - as it stands, [OptiFine is straight up not having a good time right now.](https://github.com/JLefebvre55/MinecraftModpack/issues/1).
+
 ## Todo
 
 ~~- [ ] Links in mods list~~
 - [ ] Config files?
 - [ ] More buildcraft/thaumcraft/ic2/etc. addon mods?
+- [ ] Check that all mods are listed and working
+- [ ] Update readme with total mod count
