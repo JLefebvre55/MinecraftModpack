@@ -1,4 +1,216 @@
 {
     "forgeVersion":"1.12.2-14.23.5.2847",
-    "mods": []
+    "mods":{
+        "urls":[
+        	{
+                "url": "https://optifine.net/downloadx?f=OptiFine_1.12.2_HD_U_F5.jar&x=5ac25d77bfe5413bc09f9168015447d5"
+            }
+        ],
+        "curse":[
+            {   
+                "name": "Core - bspkrsCore",
+                "projectId":"59218",
+                "fileId": "2924423"
+            },
+            {
+                "name": "Core - Forge MultiPart CBE",
+                "projectId": "258426",
+                "fileId": "2626992"
+            },
+            {
+                "name": "Core - Mantle",
+                "projectId": "74924",
+                "fileId": "2713386"
+            },
+            {
+                "name": "Core - McJtyLib",
+                "projectId": "233105",
+                "fileId": "2745846"
+            },
+            {
+                "name": "Core - Numina",
+                "projectId": "235440",
+                "fileId": "2715198"
+            },
+            {
+                "name": "Core - WanionLib",
+                "projectId": "253043",
+                "fileId": "3064112"
+            },
+            {   
+                "name": "TreeCapitator",
+                "projectId":"324007",
+                "fileId": "2722878"
+            },
+            {
+                "name": "AppleSkin",
+                "projectId": "248787",
+                "fileId": "2987247"
+            },
+            {
+                "name": "Applied Energistics 2",
+                "projectId": "223794",
+                "fileId": "2747063"
+            },
+            {
+                "name": "Applied Energistics 2 - Extra Cells",
+                "projectId": "229218",
+                "fileId": "2653854"
+            },
+            {
+                "name": "Biomes O' Plenty",
+                "projectId": "220318",
+                "fileId": "2715506"
+            },
+            {
+                "name": "BuildCraft",
+                "projectId": "61811",
+                "fileId": "2914534"
+            },
+            {
+                "name": "BuildCraft - Additional Pipes",
+                "projectId": "302569",
+                "fileId": "2615327"
+            },
+            {
+                "name": "Chicken Chunks",
+                "projectId": "243883",
+                "fileId": "2755785"
+            },
+            {
+                "name": "CodeChicken Lib",
+                "projectId": "242818",
+                "fileId": "2779848"
+            },
+            {
+                "name": "CoFH - Core",
+                "projectId": "69162",
+                "fileId": "2920433"
+            },
+            {
+                "name": "CoFH - World",
+                "projectId": "271384",
+                "fileId": "2715784"
+            },
+            {
+                "name": "CoFH - Redstone Flux",
+                "projectId": "270789",
+                "fileId": "2623090"
+            },
+            {
+                "name": "CraftTweaker",
+                "projectId": "239197",
+                "fileId": "2724129"
+            },
+            {
+                "name": "EnergyConverters",
+                "projectId": "254818",
+                "fileId": "2826061"
+            },
+            {
+                "name": "Forestry",
+                "projectId": "59751",
+                "fileId": "2684780"
+            },
+            {
+                "name": "Hwyla",
+                "projectId": "253449",
+                "fileId": "2568751",
+                "notes" : "Client-only"
+            },
+            {
+                "name": "IndustrialCraft 2 Classic",
+                "projectId": "242942",
+                "fileId": "3093607"
+            },
+            {
+                "name": "InventoryTweaks",
+                "projectId": "223094",
+                "fileId": "2482481"
+            },
+            {
+                "name": "Iron Backpacks",
+                "projectId": "227049",
+                "fileId": "2564573"
+            },
+            {
+                "name": "Iron Chests",
+                "projectId": "228756",
+                "fileId": "2747935"
+            },
+            {
+                "name": "Just Enough Items",
+                "projectId": "238222",
+                "fileId": "3040523",
+                "notes" : "Client-only"
+            },
+            {
+                "name": "JourneyMap",
+                "projectId": "32274",
+                "fileId": "2916002",
+                "notes" : "Client-only"
+            },
+            {
+                "name": "Modular Powersuits",
+                "projectId": "235442",
+                "fileId": "2743885"
+            },
+            {
+                "name": "Railcraft",
+                "projectId": "51195",
+                "fileId": "2687757"
+            },
+            {
+                "name": "RFTools",
+                "projectId": "224641",
+                "fileId": "2861573"
+            },
+            {
+                "name": "SpawnCommands",
+                "projectId": "235863",
+                "fileId": "2524509"
+            },
+            {
+                "name": "Thermal Foundation",
+                "projectId": "222880",
+                "fileId": "2926428"
+            },
+            {
+                "name": "Thermal Expansion",
+                "projectId": "69163",
+                "fileId": "2926431"
+            },
+            {
+                "name": "Thermal Dynamics",
+                "projectId": "227443",
+                "fileId": "2920505"
+            },
+            {
+                "name": "Tinkers' Construct",
+                "projectId": "74072",
+                "fileId": "2902483"
+            },
+            {
+                "name": "UniDict",
+                "projectId": "244258",
+                "fileId": "3162137"
+            },
+            {
+                "name": "UniDict",
+                "projectId": "244258",
+                "fileId": "3162137"
+            },
+            {
+                "name": "UniDict - InstantUnify",
+                "projectId": "277047",
+                "fileId": "2578325",
+                "notes": "Server-only. Requires config."
+            },
+            {
+                "name": "Wireless Redstone CBE",
+                "projectId": "260824",
+                "fileId": "2755798"
+            }
+        ]    
+    }
 }

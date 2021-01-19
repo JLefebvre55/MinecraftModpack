@@ -8,10 +8,8 @@ All credit to each mod's respective owner. All licensing in accordance with each
 
 ## Mods List
 
-Alphabetical, with supporting mods nested.
+Alphabetical, with supporting mods nested. See [./modpack.json](./modpack.json) for a more detailed list.
 
-- TreeCapitator
-- ActuallyAdditions
 - AppleSkin
 - Applied Energistics 2
   - Extra Cells
@@ -25,6 +23,7 @@ Alphabetical, with supporting mods nested.
 - Railcraft
 - Tinkers' Construct
 - Thermal Expansion/Dynamics/Foundation
+- TreeCapitator
 - Wireless Redstone
 - Various Other Support Mods (ChickenChunks, CraftTweaker2, Energy Converters 2, HWYLA, JEI, JourneyMap, OptiFine, Spawn Commands, etc.)
 
