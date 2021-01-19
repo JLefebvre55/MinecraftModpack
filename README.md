@@ -1,6 +1,7 @@
 # MinecraftModpack
 My personal Technic Launcher modpack. 
 
+[![Build Status](https://travis-ci.com/JLefebvre55/MinecraftModpack.svg?branch=master)](https://travis-ci.com/JLefebvre55/MinecraftModpack)
 
 ## Obligatory Notice
 
