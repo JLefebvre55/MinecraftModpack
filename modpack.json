@@ -2,9 +2,6 @@
     "forgeVersion":"1.12.2-14.23.5.2847",
     "mods":{
         "urls":[
-        	{
-                "url": "https://optifine.net/downloadx?f=OptiFine_1.12.2_HD_U_F5.jar&x=5ac25d77bfe5413bc09f9168015447d5"
-            }
         ],
         "curse":[
             {   
@@ -56,6 +53,11 @@
                 "name": "Applied Energistics 2 - Extra Cells",
                 "projectId": "229218",
                 "fileId": "2653854"
+            },
+            {
+                "name": "Applied Energistics 2 - Just Enough Energistics",
+                "projectId": "310812",
+                "fileId": "2783832"
             },
             {
                 "name": "Biomes O' Plenty",
@@ -166,9 +168,34 @@
                 "fileId": "2861573"
             },
             {
+                "name": "Simple Planes",
+                "projectId": "388908",
+                "fileId": "3087441"
+            },
+            {
                 "name": "SpawnCommands",
                 "projectId": "235863",
                 "fileId": "2524509"
+            },
+            {
+                "name": "Thaumcraft",
+                "projectId": "223628",
+                "fileId": "2629023"
+            },
+            {
+                "name": "Thaumcraft - Thaumic JEI",
+                "projectId": "285492",
+                "fileId": "2705304"
+            },
+            {
+                "name": "Thaumcraft - Thaumic Tinkerer",
+                "projectId": "75598",
+                "fileId": "2957213"
+            },
+            {
+                "name": "Thaumcraft - Thaumic Energistics",
+                "projectId": "223666",
+                "fileId": "2750063"
             },
             {
                 "name": "Thermal Foundation",
@@ -205,6 +232,11 @@
                 "projectId": "277047",
                 "fileId": "2578325",
                 "notes": "Server-only. Requires config."
+            },
+            {
+                "name": "Wawla",
+                "projectId": "224712",
+                "fileId": "2916368"
             },
             {
                 "name": "Wireless Redstone CBE",
