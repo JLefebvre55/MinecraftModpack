@@ -14,19 +14,31 @@ Alphabetical, with supporting mods nested. See [./modpack.json](./modpack.json) 
 - AppleSkin
 - Applied Energistics 2
   - Extra Cells
+  - Just Enough Energistics
 - Biomes O' Plenty
 - Buildcraft
+  - Additional Pipes
 - Forestry
-- IndustrialCraft 2
+- IndustrialCraft 2 Classic
 - Iron Backpacks
 - Iron Chests
+- Just Enough Items
+- JourneyMap
 - Modular Powersuits
 - Railcraft
+- RFTools
+- Simple Planes
+- Thaumcraft
+  - Thaumic JEI
+  - Thaumic Tinkerer
+  - Thaumic Energistics
+- Thermal Foundation/Expansion/Dynamics
 - Tinkers' Construct
+- TreeCapitator
 - Thermal Expansion/Dynamics/Foundation
 - TreeCapitator
 - Wireless Redstone
-- Various Other Support Mods (ChickenChunks, CraftTweaker2, Energy Converters 2, HWYLA, JEI, JourneyMap, OptiFine, Spawn Commands, etc.)
+- Various Other Support Mods (ChickenChunks, CraftTweaker2, EnergyConverters, HWYLA, WAWLA, Spawn Commands, etc.)
 
 ## Possible Additions
 
@@ -37,5 +49,6 @@ Alphabetical, with supporting mods nested. See [./modpack.json](./modpack.json) 
 
 ## Todo
 
-- [ ] Links in mods list
+~~- [ ] Links in mods list~~
 - [ ] Config files?
+- [ ] More buildcraft/thaumcraft/ic2/etc. addon mods?

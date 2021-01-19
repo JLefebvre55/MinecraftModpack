@@ -34,11 +34,6 @@
                 "projectId": "253043",
                 "fileId": "3064112"
             },
-            {   
-                "name": "TreeCapitator",
-                "projectId":"324007",
-                "fileId": "2722878"
-            },
             {
                 "name": "AppleSkin",
                 "projectId": "248787",
@@ -216,6 +211,11 @@
                 "name": "Tinkers' Construct",
                 "projectId": "74072",
                 "fileId": "2902483"
+            },
+            {   
+                "name": "TreeCapitator",
+                "projectId":"324007",
+                "fileId": "2722878"
             },
             {
                 "name": "UniDict",
