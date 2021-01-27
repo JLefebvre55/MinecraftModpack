@@ -3,25 +3,25 @@ set -e
 
 modpack_config=modpack.json
 modpack_output_zip=modpack.zip
-build_folder=build
 workspace_path=$(pwd)
 download_forge_pattern='https://files.minecraftforge.net/maven/net/minecraftforge/forge/%version%/forge-%version%-universal.jar'
 
 url_download_list=()
 curse_mod_projectIds=()
 curse_mod_fileIds=()
+curse_mod_names=()
 
 function modpack_structure {
-    if [ -d "$build_folder" ]; then
-        echo 'Clean up build folder...'
-        rm -rf "$build_folder"
+    if [ -d "build" ]; then
+        echo 'Old build found, deleting...'
+        rm -rf "build"
     fi
 
     echo 'Creating modpack folder structure...'
-    [ -d "$build_folder" ] || mkdir "$build_folder"
-    [ -d "$build_folder/bin" ] || mkdir "$build_folder/bin"
-    [ -d "$build_folder/mods" ] || mkdir "$build_folder/mods"
-    cd "$build_folder"
+    [ -d "build" ] || mkdir "build"
+    [ -d "build/bin" ] || mkdir "build/bin"
+    [ -d "build/mods" ] || mkdir "build/mods"
+    cd "build"
 }
 
 function download_file {
@@ -36,31 +36,31 @@ function download_file {
 
 function install_curse_mods {
 
-    echo 'Downloading curse mods'
+    echo 'Downloading CurseForge mods...'
     pushd "mods" > /dev/null
     export -f download_file
 
     index=0
     while [ $index -lt ${#curse_mod_projectIds[@]} ]; do
+        modname=${curse_mod_names[$index]}
         projectId=${curse_mod_projectIds[$index]}
         fileId=${curse_mod_fileIds[$index]}
-        echo "Download mod ${projectId}"
 
         download_url=$(curl -s "https://addons-ecs.forgesvc.net/api/v2/addon/${projectId}/file/${fileId}/download-url" | sed 's/ /%20/g')
-        echo "Download url: ${download_url}"
-        download_file "${download_url}" true
 
+        echo "Mod $((index+1)): Downloading ${modname} (ID ${projectId}:${fileId}, URL: ${download_url})..."
+
+        download_file "${download_url}" true
         index=$(( index + 1 ))
     done
-    printf 'Finished downloading curse mods\n'
+    echo "$((index+1)) CurseForge mods downloaded.\n"
     popd > /dev/null
 }
 
 function install_forge {
 
     pushd "bin" > /dev/null
-    forge_version=$(jq -r '.forgeVersion' "${workspace_path}/${modpack_config}")
-    
+
     echo "Download forge version $forge_version"
     download_file ${download_forge_pattern//%version%/${forge_version}} true
     mv ./*.jar 'modpack.jar'
@@ -69,27 +69,29 @@ function install_forge {
 }
 
 function read_mods {
-    echo 'Collect mods...'
+    echo 'Reading Forge version and mods from modpack JSON...'
 
     save_ifs=$IFS
     IFS=$'\n'
+    forge_version=$(jq -r '.forgeVersion' "${workspace_path}/${modpack_config}")
     url_download_list=($(jq -r '.mods.urls[] // {} | .url' "${workspace_path}/${modpack_config}"))
     curse_mod_projectIds=($(jq -r '.mods.curse[] // {} | .projectId' "${workspace_path}/${modpack_config}"))
     curse_mod_fileIds=($(jq -r '.mods.curse[] // {} | .fileId' "${workspace_path}/${modpack_config}"))
+    curse_mod_names=($(jq -r '.mods.curse[] // {} | .name' "${workspace_path}/${modpack_config}"))
     IFS=$save_ifs
 }
 
 function install_mods {
-    echo 'Downloading mods'
+    echo 'Downloading non-CurseForge mods...'
     pushd "mods" > /dev/null
     export -f download_file
     echo ${url_download_list[@]} | xargs -n 1 -P 8 -I {} -d ' ' bash -c 'download_file "{}" && printf '.''
-    printf 'Finished url mods\n'
+    printf 'Finished downloading non-CurseForge mods.\n'
     popd > /dev/null
 }
 
 function copy_overrides {
-    echo 'Copy overrides folder in modpack...'
+    echo 'Copying overridden files...'
     cp -r -v "$workspace_path/overrides/." .
 }
 
@@ -97,21 +99,33 @@ function copy_overrides {
 
 modpack_structure
 
-install_forge
-
 read_mods
+
+install_forge
 
 if [ ! "$url_download_list" == 'null' ]; then
     install_mods
+else
+    echo "No non-CurseForge mods found; proeceeding..."
 fi
 
 if [ ! "$curse_mod_projectIds" == 'null' ]; then
     install_curse_mods
+else
+    echo "No CurseForge mods found; proceeding..."
 fi
 
-copy_overrides
+echo "All mods downloaded."
 
-echo 'Create zip...'
+if [ -d "$workspace_path/overrides/" ]; then
+    copy_overrides
+else
+    echo "No 'overriddes' folder found; proceeding..."
+fi
+
+echo "Modpack built."
+
+echo 'Compressing...'
 zip -9 -r "$modpack_output_zip" .
 
-echo "Created $modpack_output_zip"
+echo "Created $modpack_output_zip successfully."
