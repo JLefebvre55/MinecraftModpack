@@ -179,26 +179,6 @@
                 "fileId": "2524509"
             },
             {
-                "name": "Thaumcraft",
-                "projectId": "223628",
-                "fileId": "2629023"
-            },
-            {
-                "name": "Thaumcraft - Thaumic JEI",
-                "projectId": "285492",
-                "fileId": "2705304"
-            },
-            {
-                "name": "Thaumcraft - Thaumic Tinkerer",
-                "projectId": "75598",
-                "fileId": "2957213"
-            },
-            {
-                "name": "Thaumcraft - Thaumic Energistics",
-                "projectId": "223666",
-                "fileId": "2750063"
-            },
-            {
                 "name": "Thermal Foundation",
                 "projectId": "222880",
                 "fileId": "2926428"
@@ -218,7 +198,7 @@
                 "projectId": "74072",
                 "fileId": "2902483"
             },
-            {   
+            {
                 "name": "TreeCapitator",
                 "projectId":"324007",
                 "fileId": "2722878"
